@@ -6,7 +6,7 @@ RUN set -eux; \
 
 RUN go get github.com/ant0ine/go-json-rest/rest; 
 
-ENV GO_APP_HOME=${GOPATH}/src/github.com/h-r-k-matsumoto/kubernetes-sapporo-startup/greeting-api
+ENV GO_APP_HOME=${GOPATH}/src/github.com/kubernetes-sapporo-for-beginners/hands-on-apps/greeting-api
 
 WORKDIR ${GO_APP_HOME}
 ADD . .
@@ -17,5 +17,5 @@ RUN chmod 755 ${GO_APP_HOME}/main
 # Execution Image #########################docke#######
 FROM golang:1.10.3-alpine3.8
 EXPOSE 8080
-COPY --from=builder /go/src/github.com/h-r-k-matsumoto/kubernetes-sapporo-startup/greeting-api/main /app/main
+COPY --from=builder /go/src/github.com/kubernetes-sapporo-for-beginners/hands-on-apps/greeting-api/main /app/main
 CMD [ "/app/main" ]
