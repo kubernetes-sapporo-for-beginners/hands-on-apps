@@ -86,7 +86,7 @@ func hello(w rest.ResponseWriter, r *rest.Request) {
 		saveGreeting(&id[0])
 	}
 
-	message := "Hello"
+	message := "Hello world！"
 	greeting := Greeting{Message: message}
 	w.WriteJson(greeting)
 }
