@@ -17,13 +17,13 @@ APIアプリケーションです。
 - `/hello` : 挨拶を返します。
 - `/health` : ヘルスチェック用です。
 
-### hello API
+### Hello API
 
-`こんにちわ` と返します。<br>
-URLクエリーとして、 `id` が存在する場合、その情報を `${APP_LOG_DIR}/app.log` に追記書き込みします。
+- `Hello` と返します。
+- URLクエリーとして、 `id` が存在する場合、その情報を `${APP_LOG_DIR}/app.log` に追記書き込みします。
 
-### health API
+### Health API
 
-環境変数 `APP_LOG_DIR` が存在するディレクトリであれば、HTTP200,OKを返します。<br>
-上記以外の場合は、HTTP500のエラーを返します。
+- 環境変数 `APP_LOG_DIR` が存在するディレクトリであれば、HTTP200,OKを返します。
+- 上記以外の場合は、HTTP500のエラーを返します。
 
