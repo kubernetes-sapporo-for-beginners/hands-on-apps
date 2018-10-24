@@ -15,7 +15,7 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build ./main.go
 RUN chmod 755 ${GO_APP_HOME}/main
 
 # Execution Image #########################docke#######
-FROM golang:1.10.3-alpine3.8
+FROM scratch
 EXPOSE 8080
 COPY --from=builder /go/src/github.com/kubernetes-sapporo-for-beginners/hands-on-apps/greeting-api/main /app/main
 CMD [ "/app/main" ]
