@@ -48,7 +48,7 @@ type Greeting struct {
 
 // Gretting reply.
 func hello(w rest.ResponseWriter, r *rest.Request) {
-	message := "Hello world!"
+	message := "Hello world!This is next version."
 	greeting := Greeting{Message: message}
 	w.WriteJson(greeting)
 }
